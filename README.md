@@ -43,6 +43,10 @@ run both schema and seeds.sql
 ## Usage
 
 
+https://user-images.githubusercontent.com/82016491/130410549-a43ce251-3656-4d3c-815c-4f667d00bfac.mp4
+
+
+
 ## License
 This application is covered under the MIT license.
 
