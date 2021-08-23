@@ -35,6 +35,10 @@ THEN
 npm install --save mysql2
 THEN
 npm install console.table --save
+THEN
+open MySQL Shell
+AND
+run both schema and seeds.sql
 ```
 ## Usage
 
