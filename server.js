@@ -39,15 +39,14 @@ const taskOperators = {
 
 function runEmployeeManager() {
   inquirer
-    .prompt([
+    .prompt(
       {
         type: "list",
         message: "How would you like to proceed?",
         name: 'tasks',
         choices: Object.keys(taskOperators)
-      },
-    ])
-    .then(({ task }) => taskOperators[task]())
+      })
+    .then(({ tasks }) => taskOperators[tasks]())
 };
 
 // Section of code that views database elements.
@@ -103,7 +102,7 @@ function addDepartment() {
       },
     ])
     .then(function(answer) {
-      let query = `INSERT INTO department (name) VALUES ?`
+      let query = `INSERT INTO department (name) VALUES (?)`
       db.query(query, answer.department, (err, res) => {
         if (err) throw err;
         console.log(`\n${answer.department} was added to Departments.\n`);
